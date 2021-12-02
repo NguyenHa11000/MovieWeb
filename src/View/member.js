@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Member() {
   const [movies, setMovies] = useState([]);
-  const [movieSearch, setMovieSearch] = useState([]);
+  
   const [searchValue, setSearchValue] = useState([]);
 
   const getMoviesRequest = async () => {
@@ -21,26 +21,12 @@ function Member() {
     getMoviesRequest()
   }, [])
 
-  const getDataSearch = async (searchValue) => {
-    const url =  `
-    https://api.themoviedb.org/3/search/movie?api_key=1394fe130ffb93ad30dbc71945f4d213&language=en-US&query=${searchValue}&page=1&include_adult=false`
-    const response = await fetch(url);
-    const responseJson = await response.json();
-    if (responseJson.results) {
-      setMovieSearch(responseJson.results)
-    }
-    // setMovies(responseJson.results);
-  }
-
-  useEffect (()=>{
-    getDataSearch(searchValue)
-  }, [searchValue])
   
   return (
     <div className="container-fluid movie-app">
       <div className="movie-search d-flex align-items-center mt-4 mb-4">
         <Link to ="/">Home</Link>
-        <SearchBox searchValue={searchValue} setSearchValue = {setSearchValue}/>
+        <SearchBox />
         <div>
           {/* <MovieList movies={movieSearch}/> */}
         </div>
