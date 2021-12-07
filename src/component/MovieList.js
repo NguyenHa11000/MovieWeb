@@ -1,10 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Movie from "./Movie";
 
 const MovieList = (props) => {
+    const [movies, setMovies] = useState([]);
+
+    // const [searchValue, setSearchValue] = useState([]);
+
+    const [type, setType] = useState('popular');
+
+    const getMoviesRequest = async () => {
+    const url = `https://api.themoviedb.org/3/movie/${props.type}?api_key=1394fe130ffb93ad30dbc71945f4d213&language=en-US&page=1`
+    const response = await fetch(url);
+    const responseJson = await response.json();
+    setMovies(responseJson.results);
+    }
+
+    useEffect ( () => {
+    getMoviesRequest()
+    }, [])
+    
     return (
         <>
-            {props.movies && props.movies.map((movie, index) => (
+            {movies && movies.map((movie, index) => (
                <Movie movie={movie}/>
             ))
             }

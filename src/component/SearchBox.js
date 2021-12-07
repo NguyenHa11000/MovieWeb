@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
-import MovieResult from "../View/MovieResults";
+import './MovieHeader.css';
+
 
 const SearchBox = () => {
     const [searchValue, setSearchValue] = useState('');
@@ -14,26 +15,26 @@ const SearchBox = () => {
         if (responseJson.results) {
           setMovieSearch(responseJson.results)
         }
-        // setMovies(responseJson.results);
       } 
     
       useEffect (()=>{
         getDataSearch(searchValue)
       }, [searchValue])
       
+      const handleKeyPress = (event) =>{
+        if (event.key === "Enter") {
+            navigate(`/result/${event.target.value}`);
+        }
+      }
     return (
         <>
-            <div className="col col-sm-4">
-            <input className ="form-control" 
-                value={searchValue}
-                onChange={(event)=> setSearchValue(event.target.value)}
-                onKeyPress={(event)=> {
-                    if(event.key === "Enter"){
-                        navigate('/result');
-                    }
-                }}
-                placeholder='type to search....'>   
-            </input>
+            <div className="col col-sm-4 movie-search">
+              <input className ="form-control" 
+                  value={searchValue}
+                  onChange={(event)=> setSearchValue(event.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder='type to search....'>   
+              </input>
             </div>
         </>
     )

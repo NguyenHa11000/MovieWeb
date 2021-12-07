@@ -1,0 +1,10 @@
+.home > .movie-app > .row > .movie-list > .row{
+  background-color:rgba(7, 7, 7, 0.9);
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+
+.home .row {
+  margin-top: 10px;
+}

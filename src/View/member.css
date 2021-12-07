@@ -1,5 +1,0 @@
-.movie-app > .row > .movie-list > .row{
-    background-color:rgba(0,0,0, 0.9);
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
