@@ -3,21 +3,23 @@ import {Routes, Route, Link, useNavigate, Math} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './View/Home';
-import Member from './View/member';
+import MovieList from './component/MovieListType';
 import MovieResult from './View/MovieResult';
+import DetailMovie from './View/DetailMovie';
 
 function App() {
   return (
     <div className="app">
       <Routes>
         <Route path="/" element={<Home/>}/>
-        {/* <Route path="/member" element ={<Member/>}/> */}
+        <Route path="/detailmovie/:id" 
+               element ={<DetailMovie/>}
+        />
         <Route 
               path = '/result/:keyword' 
               element = {<MovieResult/>}
         />
-        {/* <Route path="/Type" element={<Type/>}/>
-        <Route path="/favouriteMovie" element={<favouriteMovie/>}/> */}
+        <Route path="/popular" element={<MovieList type={'popular'}/>}/>
       </Routes>
     </div>
   );

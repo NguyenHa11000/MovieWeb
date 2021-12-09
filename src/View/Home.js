@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css'
 import MovieHeader from "../component/MovieHeader";
-import MovieList from '../component/MovieList';
+import MovieList from '../component/MovieListType';
+import MovieHome from "../component/MovieHome";
 
 const Home = () => {
 
@@ -13,18 +14,31 @@ const Home = () => {
                 <MovieHeader/>  
             </div>
                 
-            <div className = "">
+            <div id = "navigation">
                 <nav>
                     <ul>
-                        {/* <li>
-                            <Link to="/Type">Thể Loại</Link>
+                        <li>
+                            <Link to="#">Thể Loại</Link>
+                            <div className="subnav">
+                                <ul>
+                                    <li>
+                                        <Link to="/popular">Popular</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="#">Thể Loại</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="#">Thể Loại</Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li>
-                            <Link to="/favouriteMovie">Yêu thích</Link>
-                        </li> */}
-                        {/* <li>
-                            <Link to="/member">Trang cá nh</Link>
-                        </li> */}
+                            <Link to="#">Yêu thích</Link>
+                        </li>
+                        <li>
+                            <Link to="#">Trang cá nh</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -35,7 +49,7 @@ const Home = () => {
                     <div className="col-sm-8 movie-list">
                         <h2>PHIM HAY</h2>
                         <div className="row">
-                        <MovieList type={'popular'}/>
+                            <MovieList type={'popular'}/>
                         </div>
                     </div>
                     <div className="col-sm-2">
@@ -45,13 +59,19 @@ const Home = () => {
             <div className="row">   
                 <div className="col-lg-2">
                 </div>
-                <div className="col-lg-8 mv-list2">
+                <div className="col-lg-6 mv-list2">
                     <h3>Top Rated</h3>
                     <div className="row">
-                        <MovieList type={'top_rated'}/>
+                        <MovieHome type={'top_rated'}/>
                     </div>
-                </div>  
-                <div className="col-lg-2">
+                </div> 
+                <div className="col-lg-3">
+                    <h3>upcoming</h3> 
+                    <div>
+                    <MovieHome type={'upcoming'}/>
+                    </div>
+                </div> 
+                <div className="col-lg-1">
                 </div>  
             </div>
         </div>
@@ -59,21 +79,3 @@ const Home = () => {
 }
 
 export default Home;
-
-//     const [movies, setMovies] = useState([]);
-  
-//     const [searchValue, setSearchValue] = useState([]);
-    
-//     const [type, setType] = useState('popular');
-
-//     const getMoviesRequest = async (type) => {
-//     const url = `https://api.themoviedb.org/3/movie/${type}?api_key=1394fe130ffb93ad30dbc71945f4d213&language=en-US&page=1`
-//     const response = await fetch(url);
-//     const responseJson = await response.json();
-//     setMovies(responseJson.results);
-//   }
-
-//   useEffect ( () => {
-//     getMoviesRequest(type)
-//   }, [type])
-    

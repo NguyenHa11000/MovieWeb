@@ -1,18 +1,18 @@
-/* .container {
+.container {
     position: relative;
     width: 90%;
-    max-width: 250px;
+    max-width: 200px;
   }
-.image {
+  .image {
     display: block;
     box-sizing: border-box;
-    height: 350px;
-}
-.overlay {
+    height: 300px;
+  }
+  .overlay {
     position: absolute; 
     bottom: 0; 
-    background: rgba(0, 0, 0, 0.5); 
-    width: 94%;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    width: 100%;
     box-sizing: border-box;
     transition: .5s ease;
     opacity:0;
@@ -20,7 +20,7 @@
     font-size: 20px;
     padding: 20px;
     text-align: center;
-}
-.container:hover .overlay {
+  }
+  .container:hover .overlay {
     opacity: 1;
-  } */ 
+  }

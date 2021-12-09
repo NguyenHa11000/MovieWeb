@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './member.css';
-import MovieList from '../component/MovieList';
+import MovieList from '../component/MovieListType';
 import SearchBox from '../component/SearchBox';
 import { Link } from 'react-router-dom';
 
