@@ -1,12 +1,12 @@
-/* .container {
+.container {
     position: relative;
     width: 90%;
-    max-width: 250px;
+    max-width: 200px;
   }
 .image {
     display: block;
     box-sizing: border-box;
-    height: 350px;
+    height: 300px;
 }
 .overlay {
     position: absolute; 
@@ -23,4 +23,4 @@
 }
 .container:hover .overlay {
     opacity: 1;
-  } */ 
+  } 

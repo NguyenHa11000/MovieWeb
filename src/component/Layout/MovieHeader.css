@@ -1,0 +1,28 @@
+.header > .movie-search {
+    float: center;
+}
+
+li {
+    display: inline;
+}
+
+#nav .subnav {
+    display: none;
+}
+ #nav-header {
+    background-color: black;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 12px 32px;
+}
+
+#nav {
+    margin-bottom: 0px;
+}
+#name {
+    margin-right: 24px;
+}

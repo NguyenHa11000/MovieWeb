@@ -3,7 +3,7 @@ import {Routes, Route, Link, useNavigate, Math} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './View/Home';
-import MovieList from './component/MovieListType';
+import MovieList from './component/Content/MovieListType';
 import MovieResult from './View/MovieResult';
 import DetailMovie from './View/DetailMovie';
 
@@ -20,6 +20,8 @@ function App() {
               element = {<MovieResult/>}
         />
         <Route path="/popular" element={<MovieList type={'popular'}/>}/>
+        <Route path="/top_rated" element={<MovieList type={'top_rated'}/>}/>
+        <Route path="/upcoming" element={<MovieList type={'upcoming'}/>}/>
       </Routes>
     </div>
   );

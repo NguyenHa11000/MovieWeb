@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Detail from "../component/Detail";
-import MovieHeader from "../component/MovieHeader";
+import MovieHeader from "../component/Layout/MovieHeader";
 
 const DetailMovie = () => {
     const location = window.location.href

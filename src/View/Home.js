@@ -2,46 +2,15 @@ import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css'
-import MovieHeader from "../component/MovieHeader";
-import MovieList from '../component/MovieListType';
-import MovieHome from "../component/MovieHome";
+import MovieHeader from "../component/Layout/MovieHeader";
+import MovieList from "../component/Content/MovieListType";
+import MovieHome from "../component/Content/MovieHome";
 
 const Home = () => {
 
     return (
         <div className="home">
-            <div className="row">
-                <MovieHeader/>  
-            </div>
-                
-            <div id = "navigation">
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="#">Thể Loại</Link>
-                            <div className="subnav">
-                                <ul>
-                                    <li>
-                                        <Link to="/popular">Popular</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#">Thể Loại</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="#">Thể Loại</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <Link to="#">Yêu thích</Link>
-                        </li>
-                        <li>
-                            <Link to="#">Trang cá nh</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <MovieHeader/> 
             <div className="container-fluid movie-app">
                 <div className="row">
                     <div className="col-sm-2">

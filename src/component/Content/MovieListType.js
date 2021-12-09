@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import Movie from "./Movie";
-import './MovieHome.css';
+import Movie from "../Movie";
+import './MovieListType.css';
 
-const MovieHome = (props) => {
+const MovieList = (props) => {
     const [movies, setMovies] = useState([]);
 
     // const [searchValue, setSearchValue] = useState([]);
@@ -15,28 +15,20 @@ const MovieHome = (props) => {
     const responseJson = await response.json();
     setMovies(responseJson.results);
     }
+
     useEffect ( () => {
         getMoviesRequest()
     }, [])
-    const data = (movies) => {
-        var A=[]
-        movies && movies.map((movie, index) => {
-            if (index < 9){
-                A.push(movie)   
-            }
-        }
-        ) 
-        return A 
-    }
+    
     return (
         <>
             {
-                data(movies).map(
-                     (movie, index) => (<Movie movie={movie}/>)
-                )
+            movies && movies.map((movie, index) => (
+               <Movie movie={movie}/>
+            ))
             }
         </>
     )
 }
 
-export default MovieHome;
+export default MovieList;
