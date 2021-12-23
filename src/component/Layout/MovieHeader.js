@@ -34,13 +34,13 @@ const MovieHeader = () => {
                         <Link to="#">TRẠNG THÁI</Link> 
                             <ul className="subnav">
                                 <li>
-                                    <Link to="/popular">POPULAR</Link>
+                                    <Link to="/popular">Popular</Link>
                                 </li>
                                 <li>
-                                    <Link to="/top_rated">TOP REATED</Link>
+                                    <Link to="/top_rated">Top_reated</Link>
                                 </li>
                                 <li>
-                                    <Link to="/upcoming">UPCOMING</Link>
+                                    <Link to="/upcoming">Upcoming</Link>
                                 </li>
                             </ul>
                         </li>

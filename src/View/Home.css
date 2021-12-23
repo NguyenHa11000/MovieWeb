@@ -4,7 +4,9 @@
   flex-wrap: nowrap;
 }
 
-
+.content{
+  margin-top: 150px;
+}
 
  /* .container {
   position: relative;

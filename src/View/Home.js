@@ -5,13 +5,15 @@ import './Home.css'
 import MovieHeader from "../component/Layout/MovieHeader";
 import MovieList from "../component/Content/MovieListType";
 import MovieHome from "../component/Content/MovieHome";
+import FormLogin from "../component/Forms/Form_Login";
 
 const Home = () => {
 
     return (
         <div className="home">
-            <MovieHeader/> 
-            <div className="container-fluid movie-app">
+            <MovieHeader/>
+            <Link to="/Login">Đăng nhập</Link> 
+            <div className="content container-fluid movie-app">
                 <div className="row">
                     <div className="col-sm-2">
                     </div>
@@ -24,6 +26,9 @@ const Home = () => {
                     <div className="col-sm-2">
                     </div>
                 </div>
+            </div>
+            <div>
+                
             </div>
             <div className="row">   
                 <div className="col-lg-2">
@@ -43,6 +48,7 @@ const Home = () => {
                 <div className="col-lg-1">
                 </div>  
             </div>
+            
         </div>
     )
 }

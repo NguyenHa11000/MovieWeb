@@ -6,6 +6,8 @@ import Home from './View/Home';
 import MovieList from './component/Content/MovieListType';
 import MovieResult from './View/MovieResult';
 import DetailMovie from './View/DetailMovie';
+import FormLogin from './component/Forms/Form_Login';
+import FormRegister from './component/Forms/FormDK';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/popular" element={<MovieList type={'popular'}/>}/>
         <Route path="/top_rated" element={<MovieList type={'top_rated'}/>}/>
         <Route path="/upcoming" element={<MovieList type={'upcoming'}/>}/>
+        <Route path="/Login" element={<FormLogin/>}/>
+        <Route path="/Register" element={<FormRegister/>}/>
       </Routes>
     </div>
   );
