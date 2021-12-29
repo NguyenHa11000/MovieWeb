@@ -21,7 +21,7 @@ const MovieHome = (props) => {
     const data = (movies) => {
         var A=[]
         movies && movies.map((movie, index) => {
-            if (index < 9){
+            if (index < props.s){
                 A.push(movie)   
             }
         }

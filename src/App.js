@@ -8,6 +8,7 @@ import MovieResult from './View/MovieResult';
 import DetailMovie from './View/DetailMovie';
 import FormLogin from './component/Forms/Form_Login';
 import FormRegister from './component/Forms/FormDK';
+import WatchMovie from './component/Content/watchMovie';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/upcoming" element={<MovieList type={'upcoming'}/>}/>
         <Route path="/Login" element={<FormLogin/>}/>
         <Route path="/Register" element={<FormRegister/>}/>
+        <Route path="/Watch/:id" element={<WatchMovie />}/>
       </Routes>
     </div>
   );

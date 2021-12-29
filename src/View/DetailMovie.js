@@ -6,7 +6,6 @@ const DetailMovie = () => {
     const location = window.location.href
     const index = location.lastIndexOf('/') + 1
     const idMovie = location.substring(index)
-    const [key, setKey] = useState('');
     const [movie, setMovie] = useState('');
     const getDetailMovie = async () => {
         const url =  `
@@ -18,19 +17,11 @@ const DetailMovie = () => {
         // }
         setMovie(responseJson)
     } 
-    const getKeyVideo = async () => {
-        const url = `https://api.themoviedb.org/3/movie/${idMovie}/videos?api_key=1394fe130ffb93ad30dbc71945f4d213&language=en-US`
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        setKey(responseJson.key)
-    } 
+    
     useEffect (()=>{
         getDetailMovie()
     }, [])
-    useEffect ( () =>{
-        getKeyVideo()
-    },[])   
-
+    
     return (
         <>
             <div className="container-fluid">
@@ -41,7 +32,7 @@ const DetailMovie = () => {
                     <div className="col-sm-2">
                     </div>
                     <div className="col-sm-6">
-                        <Detail movie={movie} key={key}/>
+                        <Detail movie={movie}/>
                     </div> 
                     <div className="col-sm-4">
                     </div> 

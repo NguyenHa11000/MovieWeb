@@ -1,4 +1,4 @@
-.container {
+/* .container {
     position: relative;
     width: 90%;
     max-width: 200px;
@@ -11,7 +11,7 @@
 .overlay {
     position: absolute; 
     bottom: 0; 
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     box-sizing: border-box;
     transition: .5s ease;
@@ -23,4 +23,4 @@
 }
 .container:hover .overlay {
     opacity: 1;
-}
+} */

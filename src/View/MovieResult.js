@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import { Link, Match } from "react-router-dom";
 // import MovieList from "../component/MovieListType";
 import Movie from "../component/Movie";
+import MovieHeader from "../component/Layout/MovieHeader";
+import './MovieResult.css';
 
 const MovieResult = () => {
   const location = window.location.href
@@ -27,14 +29,23 @@ const MovieResult = () => {
   return (
       <>
         <div>
-          <Link to="/member">Thành Viên</Link>
-          <Link to="/">Trang Chủ</Link>
+          <MovieHeader/>
+          {/* <Link to="/member">Thành Viên</Link>
+          <Link to="/">Trang Chủ</Link> */}
           {/* <MovieList movies={movieSearch}/> */}
-          <div className="row col-lg-6">
-            {movieSearch && movieSearch.map((movie, index) => (
-            <Movie movie={movie}/>
-            ))
-            } 
+          <div className="row ">
+            <div className=" col-sm-2">
+            </div>
+            <div className="result col-sm-8">
+              <div className="row ">
+                {movieSearch && movieSearch.map((movie, index) => (
+                <Movie movie={movie}/>
+                ))
+                }
+              </div>
+            </div>
+            <div className=" col-sm-2">
+            </div> 
           </div>
         </div>
       </>

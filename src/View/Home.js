@@ -8,11 +8,11 @@ import MovieHome from "../component/Content/MovieHome";
 import FormLogin from "../component/Forms/Form_Login";
 
 const Home = () => {
-
+    
     return (
         <div className="home">
             <MovieHeader/>
-            <Link to="/Login">Đăng nhập</Link> 
+            
             <div className="content container-fluid movie-app">
                 <div className="row">
                     <div className="col-sm-2">
@@ -36,13 +36,17 @@ const Home = () => {
                 <div className="col-lg-6 mv-list2">
                     <h3>Top Rated</h3>
                     <div className="row">
-                        <MovieHome type={'top_rated'}/>
+                        <MovieHome type={'top_rated'}s={8}/>
+                    </div>
+                    <h3>Top Rated</h3>
+                    <div className="row">
+                        <MovieHome type={'top_rated'}s={8}/>
                     </div>
                 </div> 
                 <div className="col-lg-3">
                     <h3>upcoming</h3> 
                     <div>
-                    <MovieHome type={'upcoming'}/>
+                    <MovieHome type={'upcoming'} s={6}/>
                     </div>
                 </div> 
                 <div className="col-lg-1">

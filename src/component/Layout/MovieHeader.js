@@ -11,13 +11,14 @@ const MovieHeader = () => {
             <div className="row">
                 <div className=" col-sm-2">
                 </div>
-                <div className="header d-flex align-items-center mt-4 mb-4 col-sm-6">
+                <div className="header d-flex align-items-center mt-4 mb-4 col-sm-8">
                     <div id="name">
                             <h1
                                 onClick={()=> navigate('/')}
                             >MOVIE WEB</h1> 
                     </div>  
                     <SearchBox />
+                    <Link to="/Login" className="linkLG">Đăng nhập</Link> 
                 </div>
                 <div className=" col-sm-2">
                 </div>

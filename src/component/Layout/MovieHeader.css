@@ -1,7 +1,10 @@
 .header > .movie-search {
     float: center;
 }
-
+.linkLG{
+    margin-right: 20px;
+    margin-left: 300px;
+}
 #nav > li {
     display: inline-block;
     position: relative;

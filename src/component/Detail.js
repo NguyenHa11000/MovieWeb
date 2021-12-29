@@ -1,13 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Detail.css';
+import { useNavigate } from "react-router-dom";
 
 const Detail = (props) => {
-    const runVideo = () => {
-        <iframe width="420" height="315"
-            src={`https://www.youtube.com/watch?v=${props.key}`}>
-        </iframe>
-    }
+  
+    let navi = useNavigate()
+
     return (
         <>
         <div className="row detail">
@@ -15,7 +14,7 @@ const Detail = (props) => {
                 <img 
                     src={"https://image.tmdb.org/t/p/w500".concat(props.movie.poster_path)} 
                     className="image_detail "
-                    onClick={runVideo}    
+                    onClick={()=>navi(`/Watch/${props.movie.id}`)}    
                 > 
                 </img>
             </div>
@@ -25,7 +24,10 @@ const Detail = (props) => {
             </div>
         </div>
         <div className="row">
-            <p>{props.movie.overview}</p> 
+            <p>{props.movie.overview}</p> <br/>
+            <p>{props.movie.overview}</p> <br/>
+            <p>{props.movie.overview}</p> <br/>
+            <p>{props.movie.overview}</p> <br/>
         </div>
         </>
     )
