@@ -28,14 +28,14 @@ const SearchBox = () => {
       }
     return (
         <>
-            <div className="col col-sm-4 movie-search">
-              <input className ="form-control" 
-                  value={searchValue}
-                  onChange={(event)=> setSearchValue(event.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder='type to search....'>   
-              </input>
-            </div>
+          <div className="col col-sm-4 movie-search">
+            <input className ="form-control" 
+                value={searchValue}
+                onChange={(event)=> setSearchValue(event.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder='type to search....'>   
+            </input>
+          </div>
         </>
     )
 }

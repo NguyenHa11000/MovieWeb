@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import SearchBox from "./SearchBox";
 import { useNavigate} from "react-router";
 import { Link } from "react-router-dom";
+import FormLogin from "../Forms/Form_Login";
 
 
 const MovieHeader = () => {
+    let username = sessionStorage.getItem('username');
+    console.log(sessionStorage.getItem('username'))
     let navigate = useNavigate();
     return (
         <>  
@@ -18,7 +21,25 @@ const MovieHeader = () => {
                             >MOVIE WEB</h1> 
                     </div>  
                     <SearchBox />
-                    <Link to="/Login" className="linkLG">Đăng nhập</Link> 
+                    {
+                        username && (
+                            <div>
+                                <button type="button"
+                                className="login"    
+                                >{username}</button>
+                            </div>
+                        )
+                    }
+                    {
+                        !username && (
+                            <div>
+                                <button type="button"
+                                onClick={()=> navigate('/Login')}
+                                className="login"    
+                                >Đăng nhập</button>
+                            </div>
+                        )
+                    }
                 </div>
                 <div className=" col-sm-2">
                 </div>

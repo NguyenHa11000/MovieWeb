@@ -8,6 +8,7 @@ import MovieHome from "../component/Content/MovieHome";
 import FormLogin from "../component/Forms/Form_Login";
 
 const Home = () => {
+    const [token, setToken] = useState();
     
     return (
         <div className="home">

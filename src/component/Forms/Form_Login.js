@@ -17,6 +17,7 @@ const FormLogin = (props) => {
             info.forEach(element => {
                 if (element.username == username && element.password == password){
                     d=1;
+                    sessionStorage.setItem('username', username)
                     navigate('/')
                 }
                 console.log(element)
