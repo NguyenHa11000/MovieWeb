@@ -1,24 +1,26 @@
 .container {
     position: relative;
     width: 90%;
-    max-width: 200px;
+    max-width: 160px;
   }
   .image {
     display: block;
     box-sizing: border-box;
-    height: 300px;
+    max-height: 240px;
+    height: auto;
+    width: auto;
   }
   .overlay {
     position: absolute; 
     bottom: 0; 
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    background: rgba(0, 0, 0, 0.5); 
     width: 100%;
     box-sizing: border-box;
     transition: .5s ease;
     opacity:0;
     color: white;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 16px;
+    padding: 16px;
     text-align: center;
   }
   .container:hover .overlay {

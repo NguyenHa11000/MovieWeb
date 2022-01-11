@@ -7,30 +7,3 @@
 .content{
   margin-top: 150px;
 }
-
- /* .container {
-  position: relative;
-  width: 90%;
-  max-width: 200px;
-}
-.image {
-  display: block;
-  box-sizing: border-box;
-  height: 300px;
-}
-.overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgba(0, 0, 0, 0.5); 
-  width: 100%;
-  box-sizing: border-box;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-.container:hover .overlay {
-  opacity: 1;
-}  */

@@ -14,13 +14,15 @@ const Comment = (props) =>{
             localStorage.setItem('comment', JSON.stringify(cmt));
             setViewComment(cmt);
             console.log(JSON.parse(localStorage.getItem('comment')));
+            var today = new Date()
+            console.log(today.getDate()+' '+ (today.getMonth()+1) +' '+today.getFullYear())
         }
     }
 
     return(
         <>
-        <div>
-            <div>
+        <div style={{backgroundColor: "white"}}>
+            <div style={{paddingTop: "8px" }}>
                 <input type="text" 
                     onChange={(event)=>{setComment(event.target.value)}}
                     // onKeyPress={handleKeyPress}
@@ -29,8 +31,8 @@ const Comment = (props) =>{
                     onClick={saveCmt}
                 >Bình luận</button>
             </div>
-            <div>
-                <RenderCmt List = {viewComment}/>
+            <div >
+                <RenderCmt List = {viewComment} id = {idMovie}/>
             </div>
         </div>
 

@@ -6,9 +6,10 @@ const Movie = (props) => {
     let navigate = useNavigate();
     return (
         <> 
-            <div className="container d-lex justify-content-start m-2">
+            <div className="container d-lex justify-content-start m-2" >
                 <img src={"https://image.tmdb.org/t/p/w500".concat(props.movie.poster_path)} 
                     className='image'
+                    style={{ padding: "4px", backgroundColor: "rgb(32, 32, 31)"}}
                     onClick={() => navigate(`/detailmovie/${props.movie.id}`)}
                     >
                 </img>

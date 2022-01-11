@@ -1,4 +1,19 @@
 #comment{
     background-color: cornsilk;
     color: black;
+    height: 70px;
+    margin: 16px 8px ;
+}
+.name{
+    background-color: cornflowerblue;
+    color: white;
+    height: 40px;
+}
+.cmtcontent{
+    background-color: white;
+}
+.avatar{
+    background-color: cadetblue;
+    height: 40px;
+    border-radius: 50%;
 }
