@@ -30,11 +30,13 @@ const MovieHome = (props) => {
     }
     return (
         <>
-            {
-                data(movies).map(
-                     (movie, index) => (<Movie movie={movie}/>)
-                )
-            }
+            <div className="row">
+                {
+                    data(movies).map(
+                        (movie, index) => (<Movie movie={movie}/>)
+                    )
+                }
+            </div>
         </>
     )
 }

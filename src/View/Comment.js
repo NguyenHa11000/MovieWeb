@@ -10,11 +10,13 @@ const Comment = (props) =>{
     const saveCmt = () =>{
         if (comment != ''){
             let cmt = [...viewComment]
-            cmt.push({id: idMovie, content: comment,username: name});
+            var today = new Date()
+            const getCurrentTime = today.getDate()+'-'+ (today.getMonth()+1) +'-'+today.getFullYear()
+            cmt.push({id: idMovie, content: comment,username: name, timeCmt: getCurrentTime});
             localStorage.setItem('comment', JSON.stringify(cmt));
             setViewComment(cmt);
             console.log(JSON.parse(localStorage.getItem('comment')));
-            var today = new Date()
+            
             console.log(today.getDate()+' '+ (today.getMonth()+1) +' '+today.getFullYear())
         }
     }

@@ -9,6 +9,7 @@ import DetailMovie from './View/DetailMovie';
 import FormLogin from './component/Forms/Form_Login';
 import FormRegister from './component/Forms/FormDK';
 import WatchMovie from './component/Content/watchMovie';
+import MovieHome from './component/Content/MovieHome';
 
 function App() {
   return (

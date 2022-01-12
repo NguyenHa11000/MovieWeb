@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from "react";
+import MFooter from "../Layout/Footer";
+import MovieHeader from "../Layout/MovieHeader";
 import Movie from "../Movie";
 import './MovieListType.css';
+import SubMovie from "./SubMovie";
 
 const MovieList = (props) => {
 const [movies, setMovies] = useState([]);
@@ -17,49 +20,36 @@ useEffect ( () => {
     getMoviesRequest()
     console.log(movies)
 }, [])
-    // const [isTicking, setIsTicking] = React.useState(false);
-    // const [activeIdx, setActiveIdx] = React.useState(0);
-    // const bigLength = items.length;
 
-    // const prevClick = (jump = 1) => {
-    //     if (!isTicking) {
-    //         setIsTicking(true);
-    //         setItems((prev) => {
-    //             return prev.map((_, i) => prev[(i + jump) % bigLength]);
-    //         });
-    //     }
-    // };
-
-    // const nextClick = (jump = 1) => {
-    //     if (!isTicking) {
-    //         setIsTicking(true);
-    //         setItems((prev) => {
-    //             return prev.map(
-    //                 (_, i) => prev[(i - jump + bigLength) % bigLength],
-    //             );
-    //         });
-    //     }
-    // };
-
-    // const handleDotClick = (idx) => {
-    //     if (idx < activeIdx) prevClick(activeIdx - idx);
-    //     if (idx > activeIdx) nextClick(idx - activeIdx);
-    // };
-
-    // React.useEffect(() => {
-    //     if (isTicking) sleep(300).then(() => setIsTicking(false));
-    // }, [isTicking]);
-
-    // React.useEffect(() => {
-    //     setActiveIdx((length - (items[0] % length)) % length) // prettier-ignore
-    // }, [items]);
     return (
         <>
-            {
-            movies && movies.map((movie, index) => (
-               <Movie movie={movie}/>
-            ))
-            }
+        <div>
+            <MovieHeader/>
+            <div className="row" style={{marginTop: "20px"}}>
+                <div className="col-sm-2">
+                </div>
+                <div className="col-sm-6">
+                    <h3>{props.type}</h3>
+                    <div className="row ">
+                        {
+                            movies && movies.map((movie, index) => (
+                            <Movie movie={movie}/>
+                            ))
+                        }
+                    </div>
+                   
+                </div>
+                <div className="col-lg-2">
+                    <h3>upcoming</h3> 
+                    <div style={{paddingTop: "8px", backgroundColor: "black"}}>
+                    <SubMovie type={'upcoming'} />
+                    </div>
+                </div> 
+                <div className="col-sm-2">
+                </div>
+            </div>
+            <MFooter/>
+        </div>
         </>
     )
 }

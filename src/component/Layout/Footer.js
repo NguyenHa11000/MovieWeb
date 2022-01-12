@@ -4,7 +4,7 @@ const MFooter = () => {
 
     return (
         <>
-            <div style={{backgroundColor: "black", width: "100%", height: "200px"}}>
+            <div style={{backgroundColor: "black", width: "100%", height: "240px"}}>
                
             </div>
         </>

@@ -7,7 +7,7 @@
 }
 #nav > li {
     display: inline-block;
-    position: relative;
+    position: relative; 
     padding: 12px 32px;
 }
 .subnav > li {

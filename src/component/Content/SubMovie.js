@@ -34,8 +34,8 @@ const SubMovie = (props) => {
         <>
             {
             movies && movies.map((movie, index) => (
-                <div className=" row " style={{margin: "8px", backgroundColor: "black"  }}>
-                    <div className="col-lg-3 col-sm-4" style={{padding: "0px", }}>
+                <div className=" row " style={{margin: "8px", backgroundColor: "rgb(41, 44, 46)" }}>
+                    <div className="col-lg-3 col-sm-4" style={{padding: "0px" }}>
                         <img 
                             className="imgsub"
                             src={"https://image.tmdb.org/t/p/w500".concat(movie.poster_path)} 

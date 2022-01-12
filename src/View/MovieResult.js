@@ -4,6 +4,7 @@ import { Link, Match } from "react-router-dom";
 import Movie from "../component/Movie";
 import MovieHeader from "../component/Layout/MovieHeader";
 import './MovieResult.css';
+import MFooter from "../component/Layout/Footer";
 
 const MovieResult = () => {
   const location = window.location.href
@@ -47,6 +48,7 @@ const MovieResult = () => {
             <div className=" col-sm-2">
             </div> 
           </div>
+          <MFooter/>
         </div>
       </>
   )

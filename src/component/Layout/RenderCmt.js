@@ -12,11 +12,11 @@ const RenderCmt = (props) => {
         viewComment && viewComment.map((Comment, index)=>{
             if(Comment.id == props.id){
                 A.push(Comment);
-            }
+            } 
         })
         return A;
     }
-    const getCurrentTime = today.getDate()+'-'+ (today.getMonth()+1) +'-'+today.getFullYear()
+    // const getCurrentTime = today.getDate()+'-'+ (today.getMonth()+1) +'-'+today.getFullYear()
     return (
         <>
             {
@@ -27,7 +27,7 @@ const RenderCmt = (props) => {
                         <div className=" col-lg-11 cmtcontent">
                             <div className="row">
                                 <div  className=" col-lg-9"><h5>{Comment.username}</h5></div>
-                                <div className="col-lg-3">{getCurrentTime}</div>
+                                <div className="col-lg-3">{Comment.timeCmt}</div>
                             </div>
                             
                             <p>{Comment.content}</p>
