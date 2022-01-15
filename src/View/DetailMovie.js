@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
+import SubMovie from "../component/Content/SubMovie";
 import Detail from "../component/Detail";
+import MFooter from "../component/Layout/Footer";
 import MovieHeader from "../component/Layout/MovieHeader";
 
 const DetailMovie = () => {
@@ -24,20 +26,26 @@ const DetailMovie = () => {
     
     return (
         <>
-            <div className="container-fluid">
-                <div className="row">
+            <div className="container-fluid" >
+                
                     <MovieHeader/>  
-                </div>
-                <div className="row">
+               
+                <div className="row" style={{marginTop: "20px"}}>
                     <div className="col-sm-2">
                     </div>
                     <div className="col-sm-6">
                         <Detail movie={movie}/>
                     </div> 
-                    <div className="col-sm-4">
+                    <div className="col-sm-2">
+                        <h3>upcoming</h3> 
+                        <div style={{paddingTop: "8px", backgroundColor: "black"}}>
+                        <SubMovie type={'upcoming'} />
+                        </div>
+                    </div>
+                    <div className="col-sm-2">
                     </div> 
                 </div>
-                
+                <MFooter/>
             </div>
         </>
     )

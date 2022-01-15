@@ -23,7 +23,7 @@ useEffect ( () => {
 
     return (
         <>
-        <div>
+        <div className="container-fluid">
             <MovieHeader/>
             <div className="row" style={{marginTop: "20px"}}>
                 <div className="col-sm-2">

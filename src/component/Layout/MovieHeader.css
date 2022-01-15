@@ -52,3 +52,6 @@
     background-color: white;
     color: black;
 }
+.subnav{
+    z-index: 100;
+}
