@@ -38,7 +38,7 @@ const DetailMovie = () => {
                     </div> 
                     <div className="col-sm-2">
                         <h3>upcoming</h3> 
-                        <div style={{paddingTop: "8px", backgroundColor: "black"}}>
+                        <div style={{paddingTop: "8px", paddingBottom: "8px", backgroundColor: "black"}}>
                         <SubMovie type={'upcoming'} />
                         </div>
                     </div>
